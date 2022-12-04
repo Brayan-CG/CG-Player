@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<base href="https://gdplayer.to/">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="msapplication-TileColor" content="#3f51b5">
+<meta name="theme-color" content="#3f51b5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="GDPlayer Google Drive Video Player">
+
+<meta name="og:sitename" content="GDPlayer">
+<meta name="og:title" content="Google Drive Video Player">
+<meta name="og:description" content="GDPlayer Google Drive Video Player">
+<meta name="og:type" content="website">
+<meta name="og:image" content="">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Drive Video Player">
+<meta name="twitter:description" content="GDPlayer Google Drive Video Player">
+<meta name="twitter:image" content="">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="mask-icon" href="assets/img/maskable_icon.png" color="#ffffff">
+<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/apple-touch-icon-152x152-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/apple-touch-icon-120x120-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png">
+<title>Brayan CG</title>
+<link rel="preconnect" href="//t.dtscdn.com">
+<link rel="preconnect" href="//e.dtscout.com">
+<link rel="preconnect" href="//s4.histats.com">
+<link rel="preconnect" href="//s10.histats.com">
+<link rel="preconnect" href="//tags.bluekai.com">
+<link rel="preconnect" href="//www.gstatic.com">
+<link rel="preconnect" href="//fonts.gstatic.com">
+<link rel="preconnect" href="//www.googleapis.com">
+<link rel="preconnect" href="//www.googletagmanager.com">
+<link rel="preconnect" href="//www.google.com">
+<link rel="preconnect" href="//www.google-analytics.com">
+<link rel="preconnect" href="//static.cloudflareinsights.com">
+<link rel="preconnect" href="//googleusercontent.com">
+<link rel="preconnect" href="//lh3.googleusercontent.com">
+<link rel="preconnect" href="//drive-thirdparty.googleusercontent.com">
+<link rel="preconnect" href="//static.addtoany.com">
+<link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
+<link rel="preload" href="assets/vendor/fontawesome6/css/all.min.css" as="style">
+<link rel="preload" href="assets/css/sweetalert.css" as="style">
+<link rel="preload" href="assets/css/style.css" as="style">
+<link rel="preload" href="assets/vendor/jquery.min.js" as="script">
+<link rel="preload" href="assets/vendor/FormData.js" as="script">
+<link rel="preload" href="assets/vendor/js.cookie.min.js" as="script">
+<link rel="preload" href="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+<link rel="preload" href="assets/vendor/bs-custom-file-input/bs-custom-file-input.min.js" as="script">
+<link rel="preload" href="assets/vendor/sweetalert.min.js" as="script">
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" media="all">
+<link rel="stylesheet" href="assets/vendor/fontawesome6/css/all.min.css" media="all">
+<link rel="stylesheet" href="assets/css/sweetalert.css" media="all">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+        a,
+        .page-link,
+        .btn-outline-custom {
+            color: #3f51b5;
+        }
+
+        .btn-outline-custom {
+            border-color: #3f51b5;
+        }
+
+        a:hover,
+        .page-link:hover {
+            color: #303e8b;
+        }
+
+        .border-custom {
+            border-color: #3f51b5 !important;
+        }
+
+        .page-item.active .page-link,
+        .dropdown-item.active,
+        .dropdown-item:active,
+        .bg-custom,
+        .btn-custom,
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            color: #fff;
+            border-color: #3f51b5;
+            background-image: -webkit-linear-gradient(to right, #3f51b5, #303e8b);
+            background-image: -moz-linear-gradient(to right, #3f51b5, #303e8b);
+            background-image: -o-linear-gradient(to right, #3f51b5, #303e8b);
+            background-image: linear-gradient(to right, #3f51b5, #303e8b);
+            background-color: #3f51b5;
+        }
+
+        .btn-outline-custom.active,
+        .btn-outline-custom:active,
+        .btn-outline-custom.focus,
+        .btn-outline-custom:focus,
+        .btn-outline-custom:not(:disabled):hover,
+        .btn-custom.focus,
+        .btn-custom:focus,
+        .btn-custom:not(:disabled):hover {
+            color: #fff !important;
+            border-color: #303e8b;
+            background-image: -webkit-linear-gradient(to right, #303e8b, #3f51b5);
+            background-image: -moz-linear-gradient(to right, #303e8b, #3f51b5);
+            background-image: -o-linear-gradient(to right, #303e8b, #3f51b5);
+            background-image: linear-gradient(to right, #303e8b, #3f51b5);
+            background-color: #303e8b;
+        }
+
+        .page-link:focus,
+        .btn-outline-custom.focus,
+        .btn-outline-custom:focus,
+        .btn-outline-custom:not(:disabled):hover,
+        .btn-custom.focus,
+        .btn-custom:focus {
+            box-shadow: 0 0 0 .2rem rgba(63,81,181, .2);
+        }
+
+        .table-hover tbody tr:hover td {
+            background-color: rgba(63,81,181, .07) !important;
+        }
+    </style>
+<script src="assets/vendor/jquery.min.js"></script>
+<script src="assets/vendor/FormData.js" defer></script>
+<script src="assets/vendor/js.cookie.min.js" defer></script>
+<script>
+        var $ = jQuery.noConflict(),
+            uid = 0,
+            email = '',
+            baseURL = 'https://gdplayer.to/',
+            adminURL = 'https://gdplayer.to/administrator/',
+            languages = ["Default","Afrikaans","Albanian","Amharic","Arabic","Armenian","Assamese","Aymara","Azerbaijani","Bambara","Basque","Belarusian","Bengali","Bhojpuri","Bosnian","Bulgarian","Catalan","Cebuano","Chichewa","Chinese (Simplified)","Chinese (Traditional)","Corsican","Croatian","Czech","Danish","Dhivehi","Dogri","Dutch","English","Esperanto","Estonian","Ewe","Filipino","Finnish","French","Frisian","Galician","Georgian","German","Greek","Guarani","Gujarati","Haitian Creole","Hausa","Hawaiian","Hebrew","Hindi","Hmong","Hungarian","Icelandic","Igbo","Ilocano","Indonesian","Irish","Italian","Japanese","Javanese","Kannada","Kazakh","Khmer","Kinyarwanda","Konkani","Korean","Krio","Kurdish (Kurmanji)","Kurdish (Sorani)","Kyrgyz","Lao","Latin","Latvian","Lingala","Lithuanian","Luganda","Luxembourgish","Macedonian","Maithili","Malagasy","Malay","Malayalam","Maltese","Maori","Marathi","Meiteilon (Manipuri)","Mizo","Mongolian","Myanmar (Burmese)","Nepali","Norwegian","Odia (Oriya)","Oromo","Pashto","Persian","Polish","Portuguese","Punjabi","Quechua","Romanian","Russian","Samoan","Sanskrit","Scots Gaelic","Sepedi","Serbian","Sesotho","Shona","Sindhi","Sinhala","Slovak","Slovenian","Somali","Spanish","Sundanese","Swahili","Swedish","Tajik","Tamil","Tatar","Telugu","Thai","Tigrinya","Tsonga","Turkish","Turkmen","Twi","Ukrainian","Urdu","Uyghur","Uzbek","Vietnamese","Welsh","Xhosa","Yiddish","Yoruba","Zulu"],
+            showModalUpdate = false,
+            oldDBVersion = 57,
+            newDBVersion = 57;
+    </script>
+<script defer src='https://www.googletagmanager.com/gtag/js?id=G-YRZ4G3CPTG'></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-YRZ4G3CPTG');
+</script></head>
+<body class="bg-light mb-5">
+<a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+<div class="container-xl bg-white shadow rounded-bottom">
+<header id="header">
+<nav class="navbar navbar-expand-lg navbar-dark container-xl fixed-top shadow bg-custom">
+<a class="navbar-brand" href="">CG Player</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse navbar-nav-scroll" id="navbarCollapse" style="max-height:calc(100vh - 56px)">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active"><a class="nav-link" href="https://gdplayer.to/" rel="noopener"><i class="fas fa-home mr-2"></i>inició</a></li><li class="nav-item "><a class="nav-link" href="https://gdplayer.to/sharer/" rel="noopener"><i class="fab fa-google-drive mr-2"></i>Bypass Límites</a></li><li class="nav-item "><a class="nav-link" href="https://gdplayer.to/administrator/login/" rel="noopener"><i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión</a></li><li class="nav-item "><a class="nav-link" href="https://gdplayer.to/administrator/register/" rel="noopener"><i class="fas fa-user-plus mr-2"></i>Registrar</a></li><li class="nav-item "><a class="nav-link" href="https://gdplayer.tv/" rel="noopener"><i class="fas fa-tv mr-2"></i>vivir TV</a></li><li class="nav-item dropdown "><a class="dropdown-toggle btn btn-block btn-green" href="#" role="button" data-toggle="dropdown" aria-expanded="false" rel="noopener"><i class="fas fa-shopping-basket mr-2"></i>Comprar</a><ul class="dropdown-menu shadow border-0 dropdown-menu-right"><li><a class="dropdown-item" href="https://gdplayer.to/buy/" rel="noopener"><i class="fas fa-shopping-basket mr-2"></i>Comprar Código Fuente</a></li><li><a class="dropdown-item" href="https://gdplayer.to/buy-additional-host/" rel="noopener"><i class="fas fa-plus-circle mr-2"></i>Comprar Hosts Adicionales</a></li></ul></li> </ul>
+</div>
+</nav>
+</header>
+<main id="main" class="pb-5" style="margin-top:56px">
+<div class="row">
+<div class="col py-5 bg-custom text-center">
+<h1 class="h3">CG Pelis</h1>
+<p>Brayan MG</p>
+</div>
+</div>
+<div class="row my-3">
+<div class="col">
+<form id="frmCreatePlayer" method="post" enctype="multipart/form-data">
+<div class="form-group">
+<div class="input-group">
+<input tabindex="0" type="url" id="id" name="id" class="form-control" placeholder="Agregar URL del Video" required>
+<div class="input-group-append">
+<button type="button" class="btn btn-info" data-toggle="tooltip" title="Example URL" aria-label="Example URL" onclick="videos.scrollToHosts()">
+<em class="fas fa-info-circle"></em>
+</button>
+</div>
+</div>
+</div>
+<div class="form-group">
+<div class="input-group">
+<input type="url" id="aid" name="aid" class="form-control" placeholder="URL Alternativa">
+<div class="input-group-append">
+<button onclick="player.alternative.add()" type="button" class="btn btn-custom" data-toggle="tooltip" title="Add More Alternative Video URL" aria-label="Add Alternative Video URL">
+<em class="fas fa-plus"></em>
+</button>
+</div>
+</div>
+</div>
+<div class="form-group">
+<div id="posterURL" class="input-group">
+<input type="url" id="poster" name="poster" class="form-control" placeholder="Agregar URL del Poster">
+<div class="input-group-append">
+<button type="button" onclick="$('#posterUpload').toggleClass('d-none');$('#posterURL').toggleClass('d-none')" class="btn btn-primary btn-toggle-upload" data-toggle="tooltip" title="Upload Poster" aria-label="Upload Poster">
+<em class="fas fa-upload"></em>
+</button>
+</div>
+</div>
+<div id="posterUpload" class="input-group d-none">
+<div class="custom-file">
+<input type="file" class="custom-file-input form-control" id="poster-file" name="poster-file" accept=".jpg, .jpeg, .png, .webp, .gif">
+<label class="custom-file-label" for="poster-file">Choose file (.jpg, .jpeg, .png, .webp, .gif)</label>
+</div>
+<div class="input-group-append">
+<button type="button" onclick="$('#posterUpload').toggleClass('d-none');$('#posterURL').toggleClass('d-none')" class="btn btn-primary btn-toggle-upload" data-toggle="tooltip" title="Insert Poster URL" aria-label="Insert Poster URL">
+<em class="fas fa-link"></em>
+</button>
+</div>
+</div>
+</div>
+<div id="subsWrapper">
+<div class="form-group" data-index="0">
+<div class="input-group">
+<div class="input-group-prepend">
+<select id="lang-0" name="lang[]" class="form-control">
+<option value="Default">Por defecto</option>
+<option value="Afrikaans">Afrikaans</option>
+<option value="Albanian">Albanian</option>
+<option value="Amharic">Amharic</option>
+<option value="Arabic">Arabic</option>
+<option value="Armenian">Armenian</option>
+<option value="Assamese">Assamese</option>
+<option value="Aymara">Aymara</option>
+<option value="Azerbaijani">Azerbaijani</option>
+<option value="Bambara">Bambara</option>
+<option value="Basque">Basque</option>
+<option value="Belarusian">Belarusian</option>
+<option value="Bengali">Bengali</option>
+<option value="Bhojpuri">Bhojpuri</option>
+<option value="Bosnian">Bosnian</option>
+<option value="Bulgarian">Bulgarian</option>
+<option value="Catalan">Catalan</option>
+<option value="Cebuano">Cebuano</option>
+<option value="Chichewa">Chichewa</option>
+<option value="Chinese (Simplified)">Chinese (Simplified)</option>
+<option value="Chinese (Traditional)">Chinese (Traditional)</option>
+<option value="Corsican">Corsican</option>
+<option value="Croatian">Croatian</option>
+<option value="Czech">Czech</option>
+<option value="Danish">Danish</option>
+<option value="Dhivehi">Dhivehi</option>
+<option value="Dogri">Dogri</option>
+<option value="Dutch">Dutch</option>
+<option value="English">English</option>
+<option value="Esperanto">Esperanto</option>
+<option value="Estonian">Estonian</option>
+<option value="Ewe">Ewe</option>
+<option value="Filipino">Filipino</option>
+<option value="Finnish">Finnish</option>
+<option value="French">French</option>
+<option value="Frisian">Frisian</option>
+<option value="Galician">Galician</option>
+<option value="Georgian">Georgian</option>
+<option value="German">German</option>
+<option value="Greek">Greek</option>
+<option value="Guarani">Guarani</option>
+<option value="Gujarati">Gujarati</option>
+<option value="Haitian Creole">Haitian Creole</option>
+<option value="Hausa">Hausa</option>
+<option value="Hawaiian">Hawaiian</option>
+<option value="Hebrew">Hebrew</option>
+<option value="Hindi">Hindi</option>
+<option value="Hmong">Hmong</option>
+<option value="Hungarian">Hungarian</option>
+<option value="Icelandic">Icelandic</option>
+<option value="Igbo">Igbo</option>
+<option value="Ilocano">Ilocano</option>
+<option value="Indonesian">Indonesian</option>
+<option value="Irish">Irish</option>
+<option value="Italian">Italian</option>
+<option value="Japanese">Japanese</option>
+<option value="Javanese">Javanese</option>
+<option value="Kannada">Kannada</option>
+<option value="Kazakh">Kazakh</option>
+<option value="Khmer">Khmer</option>
+<option value="Kinyarwanda">Kinyarwanda</option>
+<option value="Konkani">Konkani</option>
+<option value="Korean">Korean</option>
+<option value="Krio">Krio</option>
+<option value="Kurdish (Kurmanji)">Kurdish (Kurmanji)</option>
+<option value="Kurdish (Sorani)">Kurdish (Sorani)</option>
+<option value="Kyrgyz">Kyrgyz</option>
+<option value="Lao">Lao</option>
+<option value="Latin">Latin</option>
+<option value="Latvian">Latvian</option>
+<option value="Lingala">Lingala</option>
+<option value="Lithuanian">Lithuanian</option>
+<option value="Luganda">Luganda</option>
+<option value="Luxembourgish">Luxembourgish</option>
+<option value="Macedonian">Macedonian</option>
+<option value="Maithili">Maithili</option>
+<option value="Malagasy">Malagasy</option>
+<option value="Malay">Malay</option>
+<option value="Malayalam">Malayalam</option>
+<option value="Maltese">Maltese</option>
+<option value="Maori">Maori</option>
+<option value="Marathi">Marathi</option>
+<option value="Meiteilon (Manipuri)">Meiteilon (Manipuri)</option>
+<option value="Mizo">Mizo</option>
+<option value="Mongolian">Mongolian</option>
+<option value="Myanmar (Burmese)">Myanmar (Burmese)</option>
+<option value="Nepali">Nepali</option>
+<option value="Norwegian">Norwegian</option>
+<option value="Odia (Oriya)">Odia (Oriya)</option>
+<option value="Oromo">Oromo</option>
+<option value="Pashto">Pashto</option>
+<option value="Persian">Persian</option>
+<option value="Polish">Polish</option>
+<option value="Portuguese">Portuguese</option>
+<option value="Punjabi">Punjabi</option>
+<option value="Quechua">Quechua</option>
+<option value="Romanian">Romanian</option>
+<option value="Russian">Russian</option>
+<option value="Samoan">Samoan</option>
+<option value="Sanskrit">Sanskrit</option>
+<option value="Scots Gaelic">Scots Gaelic</option>
+<option value="Sepedi">Sepedi</option>
+<option value="Serbian">Serbian</option>
+<option value="Sesotho">Sesotho</option>
+<option value="Shona">Shona</option>
+<option value="Sindhi">Sindhi</option>
+<option value="Sinhala">Sinhala</option>
+<option value="Slovak">Slovak</option>
+<option value="Slovenian">Slovenian</option>
+<option value="Somali">Somali</option>
+<option value="Spanish">Spanish</option>
+<option value="Sundanese">Sundanese</option>
+<option value="Swahili">Swahili</option>
+<option value="Swedish">Swedish</option>
+<option value="Tajik">Tajik</option>
+<option value="Tamil">Tamil</option>
+<option value="Tatar">Tatar</option>
+<option value="Telugu">Telugu</option>
+<option value="Thai">Thai</option>
+<option value="Tigrinya">Tigrinya</option>
+<option value="Tsonga">Tsonga</option>
+<option value="Turkish">Turkish</option>
+<option value="Turkmen">Turkmen</option>
+<option value="Twi">Twi</option>
+<option value="Ukrainian">Ukrainian</option>
+<option value="Urdu">Urdu</option>
+<option value="Uyghur">Uyghur</option>
+<option value="Uzbek">Uzbek</option>
+<option value="Vietnamese">Vietnamese</option>
+<option value="Welsh">Welsh</option>
+<option value="Xhosa">Xhosa</option>
+<option value="Yiddish">Yiddish</option>
+<option value="Yoruba">Yoruba</option>
+<option value="Zulu">Zulu</option>
+</select>
+<input type="hidden" id="sub-type-0" name="sub-type[]" value="url">
+</div>
+<input type="text" name="sub-url[]" class="form-control subtitle" placeholder="Subtitulos URL (.srt, .vtt, .ass, .sub, .stl, .dfxp, .ttml, .sbv, .txt)">
+<div class="input-group-append">
+<button type="button" class="btn btn-outline-primary" data-toggle="tooltip" title="Upload Subtitle" aria-label="Upload Subtitle" onclick="player.subtitle.upload($(this))" data-index="0">
+<em class="fas fa-upload"></em>
+</button>
+<button type="button" class="btn btn-outline-success" data-toggle="tooltip" title="Add Subtitle" aria-label="Add Subtitle" onclick="player.subtitle.add()">
+<em class="fas fa-plus"></em>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="form-group text-center mb-0">
+<div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LcUBrcUAAAAACybP-2Topz395jCoLlU5p1gyxYe" data-size="invisible" data-callback="gCallback"></div>
+<input type="hidden" id="captcha" name="captcha">
+<button id="submit" type="submit" class="btn btn-custom btn-block">
+<em class="fas fa-cog mr-2"></em>Crear Enlace
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="createPlayerResult" class="d-none">
+<div class="row my-3">
+<div class="col">
+<ul class="nav nav-pills nav-justified mb-3" role="tablist" aria-owns="url-tab embed-tab dl-tab req-tab json-tab">
+<li class="nav-item">
+<a role="tab" class="nav-link active" id="url-tab" data-toggle="tab" href="#turl" aria-controls="turl">Link directo</a>
+</li>
+<li class="nav-item">
+<a role="tab" class="nav-link" id="embed-tab" data-toggle="tab" href="#tembed" aria-controls="tembed">Código HTML </a>
+</li>
+<li class="nav-item">
+<a role="tab" class="nav-link" id="dl-tab" data-toggle="tab" href="#tdl" aria-controls="tdl">Link de descarga</a>
+</li>
+<li class="nav-item">
+<a role="tab" class="nav-link" id="req-tab" data-toggle="tab" href="#treq" aria-controls="treq">URL de solicitud</a>
+</li>
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="turl" role="tabpanel" aria-labelledby="url-tab">
+<label for="txtEmbed">Link directo</label>
+<textarea onfocus="this.select()" id="txtEmbed" cols="30" rows="6" class="form-control" readonly></textarea>
+</div>
+<div class="tab-pane fade" id="tembed" role="tabpanel" aria-labelledby="embed-tab">
+<label for="txtEmbedCode">Código HTML</label>
+<textarea onfocus="this.select()" id="txtEmbedCode" cols="30" rows="6" class="form-control" readonly></textarea>
+</div>
+<div class="tab-pane fade" id="tdl" role="tabpanel" aria-labelledby="dl-tab">
+<label for="txtDl">Link de descarga</label>
+<textarea onfocus="this.select()" id="txtDl" cols="30" rows="6" class="form-control" readonly></textarea>
+</div>
+<div class="tab-pane fade" id="treq" role="tabpanel" aria-labelledby="req-tab">
+<label for="txtReq">URL de solicitud</label>
+<textarea onfocus="this.select()" id="txtReq" cols="30" rows="6" class="form-control" readonly></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="row my-3 text-center">
+<div class="col-12">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe id="embedIframe" title="Video Player" class="embed-responsive-item" allowfullscreen allow="encrypted-media *;" style="overflow:hidden;border:0"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div id="hostIDFormat" class="row my-3">
+<div class="col">
+<div class="card border-custom">
+<div class="card-header border-0 bg-custom py-2 px-3">
+<div class="d-flex align-items-center">
+<h6 class="mb-0 flex-grow-1 text-white mr-2">
+<em class="fas fa-bolt mr-2"></em>Sitios Soportados</h6>
+<button class="btn btn-outline-light btn-sm" data-toggle="collapse" data-target="#collapseSites" aria-expanded="true">
+Mostrar/Esconder
+</button>
+</div>
+</div>
+<div id="collapseSites" class="card-body p-0 collapse">
+<div class="card-content px-3 pt-3">Esta herramienta admite la creación de enlaces de transmisión en más de 40 sitios web que se enumeran a continuación. Siempre estamos desarrollando para admitir más sitios web en el futuro. Puede usarlos, pero apoye estos sitios visitando a sus patrocinadores o donando para mantener estos sitios disponibles. Si el sitio que desea utilizar no se encuentra en la lista a continuación. Por favor no dude en contactar con nosotros.</div>
+<div class="card-content p-3">
+<div class="input-group">
+<div class="input-group-prepend">
+<span class="input-group-text" id="search-host">
+<em class="fas fa-magnifying-glass"></em>
+</span>
+</div>
+<input id="txtSearchHost" type="search" class="form-control" placeholder="Buscar..." aria-describedby="search-host" aria-label="Search">
+</div>
+</div>
+<div class="table-responsive">
+<table id="tbHost" class="table table-striped table-hover mb-0" style="font-size:14px!important; min-width:640px" aria-label="Example Links">
+<thead class="thead-dark">
+<tr>
+<th style="width:45px;"></th>
+<th style="width:125px;">Hosting</th>
+<th style="width:110px;">Estatus</th>
+<th>Formato de URL</th>
+</tr>
+</thead>
+<tbody>
+<tr data-host="cloudvideo">
+<td>
+<img alt="CloudVideo" title="CloudVideo" width="16" height="16" src="https://gdplayer.to/assets/img/logo/cloudvideo.png">
+</td>
+<td>CloudVideo
+<span class="badge badge-success">Additional Host</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://cloudvideo.tv/6ixdmrfrfalm" aria-label="CloudVideo Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://cloudvideo.tv/embed-6ixdmrfrfalm.html" aria-label="CloudVideo Example URL" readonly>
+</td>
+</tr>
+<tr data-host="embedgram">
+<td>
+<img alt="Embedgram" title="Embedgram" width="16" height="16" src="https://gdplayer.to/assets/img/logo/embedgram.png">
+</td>
+<td>Embedgram
+<span class="badge badge-success">Additional Host</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://embedgram.com/f/61np157orps72" aria-label="Embedgram Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://embedgram.com/v/61np157orps72" aria-label="Embedgram Example URL" readonly>
+</td>
+</tr>
+<tr data-host="streamhub">
+<td>
+<img alt="StreamHub" title="StreamHub" width="16" height="16" src="https://gdplayer.to/assets/img/logo/streamhub.png">
+</td>
+<td>StreamHub
+<span class="badge badge-success">Additional Host</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamhub.to/a9dzoiiuyl8v" aria-label="StreamHub Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamhub.to/embed-a9dzoiiuyl8v.html" aria-label="StreamHub Example URL" readonly>
+</td>
+</tr>
+<tr data-host="vlive">
+<td>
+<img alt="V LIVE" title="V LIVE" width="16" height="16" src="https://gdplayer.to/assets/img/logo/vlive.png">
+</td>
+<td>V LIVE
+<span class="badge badge-success">Additional Host</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.vlive.tv/post/0-18382971" aria-label="V LIVE Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.vlive.tv/video/118697" aria-label="V LIVE Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.vlive.tv/embed/118697" aria-label="V LIVE Example URL" readonly>
+</td>
+</tr>
+<tr data-host="vtube">
+<td>
+<img alt="vTube" title="vTube" width="16" height="16" src="https://gdplayer.to/assets/img/logo/vtube.png">
+</td>
+<td>vTube
+<span class="badge badge-success">Additional Host</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vtube.to/4499678yw3i7.html" aria-label="vTube Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vtube.to/embed-4499678yw3i7.html" aria-label="vTube Example URL" readonly>
+</td>
+</tr>
+<tr data-host="mstream">
+<td>
+<img alt="Microsoft Stream" title="Microsoft Stream" width="16" height="16" src="https://gdplayer.to/assets/img/logo/mstream.png">
+</td>
+<td>Microsoft Stream
+<span class="badge badge-success">New</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://phao40-my.sharepoint.com/:v:/g/personal/account43_my-onedrive_com/ESNDx7YXCAdNhgIsqITtjxIBuzOdUYdD0PrmFd3PhEtL5g?e=kDXyNh" aria-label="Microsoft Stream Example URL" readonly>
+</td>
+</tr>
+<tr data-host="filemoon">
+<td>
+<img alt="Filemoon" title="Filemoon" width="16" height="16" src="https://gdplayer.to/assets/img/logo/filemoon.png">
+</td>
+<td>Filemoon
+<span class="badge badge-success">New</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://filemoon.sx/d/auvcctrj0313" aria-label="Filemoon Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://filemoon.sx/e/auvcctrj0313" aria-label="Filemoon Example URL" readonly>
+</td>
+</tr>
+<tr data-host="ulozto">
+<td>
+<img alt="Uloz.to" title="Uloz.to" width="16" height="16" src="https://gdplayer.to/assets/img/logo/ulozto.png">
+</td>
+<td>Uloz.to
+<span class="badge badge-success">New</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://ulozto.net/file/Z9wKxVoRiqEl" aria-label="Uloz.to Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://ulozto.net/file/Z9wKxVoRiqEl/007-mp4" aria-label="Uloz.to Example URL" readonly>
+</td>
+</tr>
+<tr data-host="vk">
+<td>
+<img alt="VK Video" title="VK Video" width="16" height="16" src="https://gdplayer.to/assets/img/logo/vk.png">
+</td>
+<td>VK Video
+<span class="badge badge-success">New</span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vk.com/video?z=video-92828753_171333475" aria-label="VK Video Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vk.com/video-92828753_171333475" aria-label="VK Video Example URL" readonly>
+</td>
+</tr>
+<tr data-host="direct">
+<td>
+<img alt="Direct Link" title="Direct Link" width="16" height="16" src="https://gdplayer.to/assets/img/logo/direct.png">
+</td>
+<td>Direct Link
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://gdplayer.test/007.mp4" aria-label="Direct Link Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://bitmovin-a.akamaihd.net/content/MI20192708/master.m3u8" aria-label="Direct Link Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://bitmovin-a.akamaihd.net/content/MI20192708/stream.mpd" aria-label="Direct Link Example URL" readonly>
+</td>
+</tr>
+<tr data-host="gdrive">
+<td>
+<img alt="Google Drive" title="Google Drive" width="16" height="16" src="https://gdplayer.to/assets/img/logo/gdrive.png">
+</td>
+<td>Google Drive
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://drive.google.com/file/d/1-078k-vXXDeWQI94HgPHQtsbHwojOSzK/view" aria-label="Google Drive Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://drive.google.com/open?id=1-078k-vXXDeWQI94HgPHQtsbHwojOSzK" aria-label="Google Drive Example URL" readonly>
+</td>
+</tr>
+<tr data-host="fembed">
+<td>
+<img alt="Fembed" title="Fembed" width="16" height="16" src="https://gdplayer.to/assets/img/logo/fembed.png">
+</td>
+<td>Fembed
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.fembed.com/v/qgl1-fee-e-nrry" aria-label="Fembed Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.fembed.com/f/qgl1-fee-e-nrry" aria-label="Fembed Example URL" readonly>
+</td>
+</tr>
+<tr data-host="blogger">
+<td>
+<img alt="Blogger" title="Blogger" width="16" height="16" src="https://gdplayer.to/assets/img/logo/blogger.png">
+</td>
+<td>Blogger
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://gdplayertop.blogspot.com/2021/10/testing.html" aria-label="Blogger Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.blogger.com/video.g?token=AD6v5dyn8RZEpGJxtUCAqX4HtPuhgoH3oht5gFtEj-djFdO5cJllMrQUttdNUJKpdcc_WghS07NWEr5gZZF9pEz2OjDpDpNgKqN89WNVYeUGjfzuqqdGLZiZUlDLbdofcAQVHLVEo9w" aria-label="Blogger Example URL" readonly>
+</td>
+</tr>
+<tr data-host="googlephotos">
+<td>
+<img alt="Google Photos" title="Google Photos" width="16" height="16" src="https://gdplayer.to/assets/img/logo/googlephotos.png">
+</td>
+<td>Google Photos
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://photos.app.goo.gl/a9SuP8tvujExReBMA" aria-label="Google Photos Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://photos.google.com/share/AF1QipPzJ2h_qMn2HpXoNquhC7YH78FBRzt3jOAq3hu_ha-_F0VnNZYp877WNeUPBHkiFA?key=OWVtLUpkWWVpbnd1cUxvQmVXU3l1RUYxZ0xKRDN3" aria-label="Google Photos Example URL" readonly>
+</td>
+</tr>
+<tr data-host="youtube">
+<td>
+<img alt="Youtube" title="Youtube" width="16" height="16" src="https://gdplayer.to/assets/img/logo/youtube.png">
+</td>
+<td>Youtube
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.youtube.com/watch?v=7GqClqvlObY" aria-label="Youtube Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://youtu.be/7GqClqvlObY" aria-label="Youtube Example URL" readonly>
+</td>
+</tr>
+<tr data-host="amazon">
+<td>
+<img alt="Amazon Drive" title="Amazon Drive" width="16" height="16" src="https://gdplayer.to/assets/img/logo/amazon.png">
+</td>
+<td>Amazon Drive
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.amazon.com/clouddrive/share/ljr2Tl6Fv3UdezkJbUMBO4KweJYh5ESF700b9kyZbH7" aria-label="Amazon Drive Example URL" readonly>
+</td>
+</tr>
+<tr data-host="anonfile">
+<td>
+<img alt="AnonFile" title="AnonFile" width="16" height="16" src="https://gdplayer.to/assets/img/logo/anonfile.png">
+</td>
+<td>AnonFile
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://anonfiles.com/d5EeOaBfo6" aria-label="AnonFile Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://anonfiles.com/d5EeOaBfo6/SPECTRE_-_Official_Trailer_mp4" aria-label="AnonFile Example URL" readonly>
+</td>
+</tr>
+ <tr data-host="archive">
+<td>
+<img alt="Archive" title="Archive" width="16" height="16" src="https://gdplayer.to/assets/img/logo/archive.png">
+</td>
+<td>Archive
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://archive.org/details/007_20211018" aria-label="Archive Example URL" readonly>
+</td>
+</tr>
+<tr data-host="bayfiles">
+<td>
+<img alt="BayFiles" title="BayFiles" width="16" height="16" src="https://gdplayer.to/assets/img/logo/bayfiles.png">
+</td>
+<td>BayFiles
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://bayfiles.com/x8EbOcB5o7" aria-label="BayFiles Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://bayfiles.com/x8EbOcB5o7/SPECTRE_-_Official_Trailer_mp4" aria-label="BayFiles Example URL" readonly>
+</td>
+</tr>
+<tr data-host="dailymotion">
+<td>
+<img alt="Dailymotion" title="Dailymotion" width="16" height="16" src="https://gdplayer.to/assets/img/logo/dailymotion.png">
+</td>
+<td>Dailymotion
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.dailymotion.com/video/k2I7DtiFJm5WNmxinOX" aria-label="Dailymotion Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.dailymotion.com/embed/video/k2I7DtiFJm5WNmxinOX" aria-label="Dailymotion Example URL" readonly>
+</td>
+</tr>
+<tr data-host="dropbox">
+<td>
+<img alt="Dropbox" title="Dropbox" width="16" height="16" src="https://gdplayer.to/assets/img/logo/dropbox.png">
+</td>
+<td>Dropbox
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.dropbox.com/s/seap0x345nexifw/007.mp4" aria-label="Dropbox Example URL" readonly>
+</td>
+</tr>
+<tr data-host="facebook">
+<td>
+<img alt="Facebook" title="Facebook" width="16" height="16" src="https://gdplayer.to/assets/img/logo/facebook.png">
+</td>
+<td>Facebook
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.facebook.com/AttackOnTitan/videos/349559842677536" aria-label="Facebook Example URL" readonly>
+ </td>
+</tr>
+<tr data-host="filesfm">
+<td>
+<img alt="Files.fm" title="Files.fm" width="16" height="16" src="https://gdplayer.to/assets/img/logo/filesfm.png">
+</td>
+<td>Files.fm
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://files.fm/f/qfntggjvt" aria-label="Files.fm Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://files.fm/u/bdnj6rvcx" aria-label="Files.fm Example URL" readonly>
+</td>
+</tr>
+<tr data-host="filesim">
+<td>
+<img alt="Files.im" title="Files.im" width="16" height="16" src="https://gdplayer.to/assets/img/logo/filesim.png">
+</td>
+<td>Files.im
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://files.im/1fzq42pq4rnv" aria-label="Files.im Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://files.im/embed-1fzq42pq4rnv.html" aria-label="Files.im Example URL" readonly>
+</td>
+</tr>
+<tr data-host="fireload">
+<td>
+<img alt="Fireload" title="Fireload" width="16" height="16" src="https://gdplayer.to/assets/img/logo/fireload.png">
+</td>
+<td>Fireload
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.fireload.com/873944eb0a45b5ac" aria-label="Fireload Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.fireload.com/873944eb0a45b5ac/007.mp4" aria-label="Fireload Example URL" readonly>
+</td>
+</tr>
+<tr data-host="gofile">
+<td>
+<img alt="Gofile" title="Gofile" width="16" height="16" src="https://gdplayer.to/assets/img/logo/gofile.png">
+</td>
+<td>Gofile
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://gofile.io/d/s3MlBg" aria-label="Gofile Example URL" readonly>
+</td>
+</tr>
+<tr data-host="hexupload">
+<td>
+<img alt="Hexupload" title="Hexupload" width="16" height="16" src="https://gdplayer.to/assets/img/logo/hexupload.png">
+</td>
+<td>Hexupload
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://hexupload.net/xmxfq161l46z" aria-label="Hexupload Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://hexupload.net/embed-xmxfq161l46z.html" aria-label="Hexupload Example URL" readonly>
+</td>
+</tr>
+<tr data-host="hxfile">
+<td>
+<img alt="HxFile" title="HxFile" width="16" height="16" src="https://gdplayer.to/assets/img/logo/hxfile.png">
+</td>
+<td>HxFile
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://hxfile.co/4fcdhb7nudwj" aria-label="HxFile Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://hxfile.co/embed-4fcdhb7nudwj.html" aria-label="HxFile Example URL" readonly>
+</td>
+</tr>
+<tr data-host="indishare">
+<td>
+<img alt="Indishare" title="Indishare" width="16" height="16" src="https://gdplayer.to/assets/img/logo/indishare.png">
+</td>
+<td>Indishare
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.indishare.org/j8wmsk0qbit0" aria-label="Indishare Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://dl.indishare.cc/j8wmsk0qbit0" aria-label="Indishare Example URL" readonly>
+</td>
+</tr>
+<tr data-host="mediafire">
+<td>
+<img alt="MediaFire" title="MediaFire" width="16" height="16" src="https://gdplayer.to/assets/img/logo/mediafire.png">
+</td>
+<td>MediaFire
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.mediafire.com/file/8kov3shiy05ao7k/" aria-label="MediaFire Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.mediafire.com/file/8kov3shiy05ao7k/007.mp4/file" aria-label="MediaFire Example URL" readonly>
+</td>
+</tr>
+<tr data-host="mixdropto">
+<td>
+<img alt="MixDrop" title="MixDrop" width="16" height="16" src="https://gdplayer.to/assets/img/logo/mixdropto.png">
+</td>
+<td>MixDrop
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://mixdrop.co/f/knnndwnjipeqm8" aria-label="MixDrop Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://mixdrop.co/e/knnndwnjipeqm8" aria-label="MixDrop Example URL" readonly>
+ </td>
+</tr>
+<tr data-host="mp4upload">
+<td>
+ <img alt="mp4upload" title="mp4upload" width="16" height="16" src="https://gdplayer.to/assets/img/logo/mp4upload.png">
+</td>
+<td>mp4upload
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.mp4upload.com/kfqv40px28yi" aria-label="mp4upload Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.mp4upload.com/kfqv40px28yi/007.mp4" aria-label="mp4upload Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.mp4upload.com/embed-kfqv40px28yi.html" aria-label="mp4upload Example URL" readonly>
+</td>
+</tr>
+<tr data-host="mymailru">
+<td>
+<img alt="Mail.Ru Video" title="Mail.Ru Video" width="16" height="16" src="https://gdplayer.to/assets/img/logo/mymailru.png">
+</td>
+<td>Mail.Ru Video
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://my.mail.ru/video/embed/84530788950872688" aria-label="Mail.Ru Video Example URL" readonly>
+</td>
+</tr>
+<tr data-host="okru">
+<td>
+<img alt="OK.ru" title="OK.ru" width="16" height="16" src="https://gdplayer.to/assets/img/logo/okru.png">
+</td>
+<td>OK.ru
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://ok.ru/video/1726154213914" aria-label="OK.ru Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://ok.ru/videoembed/1726154213914" aria-label="OK.ru Example URL" readonly>
+</td>
+</tr>
+<tr data-host="onedrive">
+<td>
+<img alt="OneDrive" title="OneDrive" width="16" height="16" src="https://gdplayer.to/assets/img/logo/onedrive.png">
+</td>
+<td>OneDrive
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://onedrive.live.com/embed?resid=2D375281D3105D45%2123209" aria-label="OneDrive Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://onedrive.live.com/?cid=2D375281D3105D45&id=2D375281D3105D45%2123209&parId=2D375281D3105D45%21105&o=OneUp" aria-label="OneDrive Example URL" readonly>
+</td>
+</tr>
+<tr data-host="pcloud">
+<td>
+<img alt="pCloud" title="pCloud" width="16" height="16" src="https://gdplayer.to/assets/img/logo/pcloud.png">
+</td>
+<td>pCloud
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+ <em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://e.pcloud.link/publink/show?code=XZavK5Zgbl8Ab9XXbppK2cOwScLqV0YFY1V" aria-label="pCloud Example URL" readonly>
+</td>
+</tr>
+<tr data-host="racaty">
+<td>
+<img alt="Racaty" title="Racaty" width="16" height="16" src="https://gdplayer.to/assets/img/logo/racaty.png">
+</td>
+<td>Racaty
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://racaty.io/0e6homzp62k9" aria-label="Racaty Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://racaty.io/embed-0e6homzp62k9.html" aria-label="Racaty Example URL" readonly>
+</td>
+</tr>
+<tr data-host="rumble">
+<td>
+<img alt="Rumble" title="Rumble" width="16" height="16" src="https://gdplayer.to/assets/img/logo/rumble.png">
+</td>
+<td>Rumble
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://rumble.com/v2znie-bond-is-back-with-a-trailer-for-spectre.html" aria-label="Rumble Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://rumble.com/embed/vb83k/" aria-label="Rumble Example URL" readonly>
+</td>
+</tr>
+<tr data-host="sendvid">
+<td>
+<img alt="Sendvid" title="Sendvid" width="16" height="16" src="https://gdplayer.to/assets/img/logo/sendvid.png">
+</td>
+<td>Sendvid
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://sendvid.com/pd8en8bj" aria-label="Sendvid Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://sendvid.com/embed/pd8en8bj" aria-label="Sendvid Example URL" readonly>
+</td>
+</tr>
+<tr data-host="sibnet">
+<td>
+<img alt="Sibnet.Ru Video" title="Sibnet.Ru Video" width="16" height="16" src="https://gdplayer.to/assets/img/logo/sibnet.png">
+</td>
+<td>Sibnet.Ru Video
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://video.sibnet.ru/video1934093-007__Spectre_Official_Trailer___007__Spektr__Perevod__Wizzar63_" aria-label="Sibnet.Ru Video Example URL" readonly>
+</td>
+</tr>
+<tr data-host="solidfiles">
+<td>
+<img alt="Solidfiles" title="Solidfiles" width="16" height="16" src="https://gdplayer.to/assets/img/logo/solidfiles.png">
+</td>
+<td>Solidfiles
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.solidfiles.com/v/Q4D5D2X2AB4GR" aria-label="Solidfiles Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.solidfiles.com/e/Q4D5D2X2AB4GR" aria-label="Solidfiles Example URL" readonly>
+</td>
+</tr>
+<tr data-host="soundcloud">
+<td>
+<img alt="Soundcloud" title="Soundcloud" width="16" height="16" src="https://gdplayer.to/assets/img/logo/soundcloud.png">
+</td>
+<td>Soundcloud
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://soundcloud.com/dengerin-musik-797697733/habib-syech-bin-abdul-qodir-assegaf-padang-wulan" aria-label="Soundcloud Example URL" readonly>
+</td>
+</tr>
+<tr data-host="streamable">
+<td>
+<img alt="Streamable" title="Streamable" width="16" height="16" src="https://gdplayer.to/assets/img/logo/streamable.png">
+</td>
+<td>Streamable
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamable.com/nqfrzj" aria-label="Streamable Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamable.com/e/nqfrzj" aria-label="Streamable Example URL" readonly>
+</td>
+</tr>
+<tr data-host="streamlare">
+<td>
+<img alt="Streamlare" title="Streamlare" width="16" height="16" src="https://gdplayer.to/assets/img/logo/streamlare.png">
+</td>
+<td>Streamlare
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamlare.com/v/7AkQpz9LyKjDRdN6" aria-label="Streamlare Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamlare.com/e/7AkQpz9LyKjDRdN6" aria-label="Streamlare Example URL" readonly>
+</td>
+</tr>
+<tr data-host="streamsb">
+<td>
+<img alt="StreamSB" title="StreamSB" width="16" height="16" src="https://gdplayer.to/assets/img/logo/streamsb.png">
+</td>
+<td>StreamSB
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamsb.net/vgr45s4harga" aria-label="StreamSB Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamsb.net/play/vgr45s4harga" aria-label="StreamSB Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamsb.net/embed-vgr45s4harga.html" aria-label="StreamSB Example URL" readonly>
+</td>
+</tr>
+<tr data-host="streamtape">
+<td>
+<img alt="Streamtape" title="Streamtape" width="16" height="16" src="https://gdplayer.to/assets/img/logo/streamtape.png">
+</td>
+<td>Streamtape
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://streamtape.com/v/J0pmO22YgLhj1lk" aria-label="Streamtape Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://strcloud.link/e/J0pmO22YgLhj1lk" aria-label="Streamtape Example URL" readonly>
+</td>
+</tr>
+<tr data-host="supervideo">
+<td>
+<img alt="SuperVideo" title="SuperVideo" width="16" height="16" src="https://gdplayer.to/assets/img/logo/supervideo.png">
+</td>
+<td>SuperVideo
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://supervideo.tv/2rhm7nfwmk5w" aria-label="SuperVideo Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://supervideo.tv/e/2rhm7nfwmk5w" aria-label="SuperVideo Example URL" readonly>
+</td>
+</tr>
+<tr data-host="tiktok">
+<td>
+<img alt="Tiktok" title="Tiktok" width="16" height="16" src="https://gdplayer.to/assets/img/logo/tiktok.png">
+</td>
+<td>Tiktok
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.tiktok.com/@lyothecat/video/6766975139570633990" aria-label="Tiktok Example URL" readonly>
+</td>
+</tr>
+<tr data-host="upstream">
+<td>
+<img alt="UpStream" title="UpStream" width="16" height="16" src="https://gdplayer.to/assets/img/logo/upstream.png">
+</td>
+<td>UpStream
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://upstream.to/da8n1o2pblj8" aria-label="UpStream Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://upstream.to/embed-da8n1o2pblj8.html" aria-label="UpStream Example URL" readonly>
+</td>
+</tr>
+<tr data-host="uptobox">
+<td>
+<img alt="Uptobox" title="Uptobox" width="16" height="16" src="https://gdplayer.to/assets/img/logo/uptobox.png">
+</td>
+<td>Uptobox
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://uptobox.com/3hwqnzqh9061" aria-label="Uptobox Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://uptostream.com/3hwqnzqh9061" aria-label="Uptobox Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://uptostream.com/iframe/3hwqnzqh9061" aria-label="Uptobox Example URL" readonly>
+</td>
+</tr>
+<tr data-host="uqload">
+<td>
+<img alt="Uqload" title="Uqload" width="16" height="16" src="https://gdplayer.to/assets/img/logo/uqload.png">
+</td>
+<td>Uqload
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://uqload.com/tlf4hore8oag" aria-label="Uqload Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://uqload.com/embed-tlf4hore8oag.html" aria-label="Uqload Example URL" readonly>
+</td>
+</tr>
+<tr data-host="userscloud">
+<td>
+<img alt="Userscloud" title="Userscloud" width="16" height="16" src="https://gdplayer.to/assets/img/logo/userscloud.png">
+</td>
+<td>Userscloud
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://userscloud.com/6455all5tvj3" aria-label="Userscloud Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://userscloud.com/embed-6455all5tvj3.html" aria-label="Userscloud Example URL" readonly>
+</td>
+</tr>
+<tr data-host="videobin">
+<td>
+<img alt="Videobin" title="Videobin" width="16" height="16" src="https://gdplayer.to/assets/img/logo/videobin.png">
+</td>
+<td>Videobin
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://videobin.co/7x5rueh9ayxl" aria-label="Videobin Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://videobin.co/embed-7x5rueh9ayxl.html" aria-label="Videobin Example URL" readonly>
+</td>
+</tr>
+<tr data-host="vidoza">
+<td>
+<img alt="Vidoza" title="Vidoza" width="16" height="16" src="https://gdplayer.to/assets/img/logo/vidoza.png">
+</td>
+<td>Vidoza
+<span class="badge badge-success"></span>
+  </td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vidoza.net/q5yla9g4ztxk" aria-label="Vidoza Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vidoza.net/q5yla9g4ztxk/spectre_official_trailer" aria-label="Vidoza Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vidoza.net/embed-q5yla9g4ztxk.html" aria-label="Vidoza Example URL" readonly>
+</td>
+</tr>
+<tr data-host="vimeo">
+<td>
+<img alt="Vimeo" title="Vimeo" width="16" height="16" src="https://gdplayer.to/assets/img/logo/vimeo.png">
+</td>
+<td>Vimeo
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vimeo.com/259411563" aria-label="Vimeo Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://player.vimeo.com/video/259411563" aria-label="Vimeo Example URL" readonly>
+</td>
+</tr>
+<tr data-host="voe">
+<td>
+<img alt="VOE" title="VOE" width="16" height="16" src="https://gdplayer.to/assets/img/logo/voe.png">
+</td>
+<td>VOE
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://voe.sx/8tql9at1dice" aria-label="VOE Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://voe.sx/e/8tql9at1dice" aria-label="VOE Example URL" readonly>
+</td>
+</tr>
+<tr data-host="vudeo">
+<td>
+<img alt="Vudeo" title="Vudeo" width="16" height="16" src="https://gdplayer.to/assets/img/logo/vudeo.png">
+</td>
+<td>Vudeo
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vudeo.io/fh74pouftjwe" aria-label="Vudeo Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://vudeo.io/embed-fh74pouftjwe.html" aria-label="Vudeo Example URL" readonly>
+</td>
+</tr>
+<tr data-host="yadisk">
+<td>
+<img alt="Yandex Disk" title="Yandex Disk" width="16" height="16" src="https://gdplayer.to/assets/img/logo/yadisk.png">
+</td>
+<td>Yandex Disk
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://disk.yandex.ru/i/jUCaMeoCKepLUw" aria-label="Yandex Disk Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://yadi.sk/i/jUCaMeoCKepLUw" aria-label="Yandex Disk Example URL" readonly>
+</td>
+</tr>
+<tr data-host="yourupload">
+<td>
+<img alt="YourUpload" title="YourUpload" width="16" height="16" src="https://gdplayer.to/assets/img/logo/yourupload.png">
+</td>
+<td>YourUpload
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.yourupload.com/watch/SFy6T2PbbGWi" aria-label="YourUpload Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www.yourupload.com/embed/SFy6T2PbbGWi" aria-label="YourUpload Example URL" readonly>
+</td>
+</tr>
+<tr data-host="zippyshare">
+<td>
+<img alt="Zippyshare" title="Zippyshare" width="16" height="16" src="https://gdplayer.to/assets/img/logo/zippyshare.png">
+</td>
+<td>Zippyshare
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://www104.zippyshare.com/v/2HBO3Dz4/file.html" aria-label="Zippyshare Example URL" readonly>
+</td>
+</tr>
+<tr data-host="zplayer">
+<td>
+<img alt="zPlayer.live" title="zPlayer.live" width="16" height="16" src="https://gdplayer.to/assets/img/logo/zplayer.png">
+</td>
+<td>zPlayer.live
+<span class="badge badge-success"></span>
+</td>
+<td>
+<span class="text-success">
+<em aria-hidden="true" class="fas fa-check-circle fa-lg mr-2"></em>Working
+</span>
+</td>
+<td>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://v2.zplayer.live/video/6gqrvznt7t8p" aria-label="zPlayer.live Example URL" readonly>
+<input type="url" onfocus="this.select()" class="form-control form-control-sm mb-1" value="https://v2.zplayer.live/embed/6gqrvznt7t8p" aria-label="zPlayer.live Example URL" readonly>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer id="footer" class="row py-5 bg-dark text-center text-light rounded-bottom">
+<div class="col-12">
+<ul class="nav justify-content-center mb-3">
+<li class="nav-item">
+<a class="nav-link" href="https://gdplayer.to/">Inicio</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="changelog">Registro de Cambios</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="terms">Terminos</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="privacy">Privacidad</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://bit.ly/2Wdd7oG" target="_blank" rel="noopener">Contactos</a>
+</li>
+</ul>
+<p>&copy; 2022.<i class="fas fa-heart text-danger"></i> by CG Player.</p>
+</div>
+</footer>
+</div>
+<button type="button" id="gotoTop" title="Go to Top" class="bg-custom shadow">
+<span class="gotoContent">
+<em class="fas fa-chevron-up"></em>
+</span>
+</button>
+<script src="assets/vendor/pwacompat.min.js" defer></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+<script src="assets/vendor/bs-custom-file-input/bs-custom-file-input.min.js" defer></script>
+<script src="assets/vendor/sweetalert.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer></script>
+<script>
+    var $captcha = $('form').find('#captcha');
+    var onloadCallback = function() {
+        if ($captcha.length) {
+            grecaptcha.ready(function() {
+                grecaptcha.execute();
+            });
+        }
+    };
+    function gCallback(res) {
+        if (res !== '' && $captcha.length) {
+            $captcha.val(res);
+        } else {
+            swalError('Captcha failed to load!');
+        }
+    }
+</script>
+<script src="https://static.addtoany.com/menu/page.js" defer async></script>
+<noscript>
+    <a href="#" target="_blank"><img src="//sstatic1.histats.com/0.gif?4326450&amp;101" style="border:0"></a>
+</noscript><script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+            .register('sw.js')
+            .then(function(res) {
+                console.debug("service worker registered");
+            })
+            .catch(function(err) {
+                console.debug("service worker not registered", err);
+            });
+    }
+
+    var deferredPrompt,
+        $prompt;
+
+    window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        $prompt = $('<div id="installPrompt" class="position-fixed bg-white p-3 shadow rounded text-center" style="bottom:50px;left:50%;z-index:11;width:200px;transform:translateX(-50%)"><p><strong>You can access this website on your device easily.</strong></p><button type="button" id="installWeb" class="btn btn-custom"><i class="fas fa-download mr-2"></i>Install Now</button><a id="hideInstallPrompt" href="javascript:void(0)" onclick="$(\'#installPrompt\').remove()" role="button" class="text-danger position-absolute bg-white rounded-circle p-2" style="top:-1rem;right:-1rem;width:2.5rem;height:2.5rem"><i class="fas fa-xl fa-times-circle"></i></a></div>');
+        $('body').append($prompt);
+        document.getElementById('installWeb').addEventListener('click', async () => {
+            deferredPrompt.prompt();
+            const {
+                outcome
+            } = await deferredPrompt.userChoice;
+            if (outcome !== 'dismissed') {
+                deferredPrompt = null;
+            }
+            $prompt.remove()
+        });
+    });
+
+    window.addEventListener('appinstalled', function() {
+        $(document).find('#hideInstallPrompt').click();
+        deferredPrompt = null;
+    });
+</script>
+</body>
+</html>
