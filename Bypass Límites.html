@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <base href="https://gdplayer.to/">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex">
 <meta name="msapplication-TileColor" content="#3f51b5">
 <meta name="theme-color" content="#3f51b5">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Generate direct links and download Google Drive files without signing in to a Google account.">
+
+<meta name="og:sitename" content="CG Player">
+<meta name="og:title" content="Google Drive Direct Link Generator &amp; Downloader">
+<meta name="og:description" content="Generate direct links and download Google Drive files without signing in to a Google account.">
+<meta name="og:type" content="website">
+<meta name="og:image" content="">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Drive Direct Link Generator &amp; Downloader">
+<meta name="twitter:description" content="Generate direct links and download Google Drive files without signing in to a Google account.">
+<meta name="twitter:image" content="">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="mask-icon" href="assets/img/maskable_icon.png" color="#ffffff">
-<link rel="shortcut icon" href="Body/iconos/logotipo.jpg" type="image/ico">
+<link rel="shortcut icon" href="https://cg-player.netlify.app/Body/iconos/logotipo.jpg" type="image/ico">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/apple-touch-icon-152x152-precomposed.png">
@@ -22,7 +33,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon.png">
 <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png">
-<title>Login - CG Player</title>
+<title>Google Drive Direct Link Generator &amp; Downloader - CG Player</title>
 <link rel="preconnect" href="//t.dtscdn.com">
 <link rel="preconnect" href="//e.dtscout.com">
 <link rel="preconnect" href="//s4.histats.com">
@@ -39,34 +50,20 @@
 <link rel="preconnect" href="//lh3.googleusercontent.com">
 <link rel="preconnect" href="//drive-thirdparty.googleusercontent.com">
 <link rel="preconnect" href="//static.addtoany.com">
-<link rel="preconnect" href="//i0.wp.com">
 <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
 <link rel="preload" href="assets/vendor/fontawesome6/css/all.min.css" as="style">
 <link rel="preload" href="assets/css/sweetalert.css" as="style">
-<link rel="preload" href="assets/css/multi-select.dist.css" as="style">
-<link rel="preload" href="assets/vendor/select2/css/select2.min.css" as="style">
-<link rel="preload" href="assets/css/select2-bootstrap4.min.css" as="style">
-<link rel="preload" href="assets/vendor/jquery-wheelcolorpicker/css/wheelcolorpicker.css" as="style">
-<link rel="preload" href="assets/vendor/toastify-js/toastify.min.css" as="style">
-<link rel="preload" href="assets/vendor/apexcharts/apexcharts.css" as="style">
 <link rel="preload" href="assets/css/style.css" as="style">
 <link rel="preload" href="assets/vendor/jquery.min.js" as="script">
-<link rel="preload" href="assets/vendor/pwacompat.min.js" as="script">
+<link rel="preload" href="assets/vendor/FormData.js" as="script">
 <link rel="preload" href="assets/vendor/js.cookie.min.js" as="script">
-<link rel="preload" href="assets/vendor/sweetalert.min.js" as="script">
-<link rel="preload" href="assets/vendor/jquery-ui.min.js" as="script">
 <link rel="preload" href="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
-<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome6/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/sweetalert.css">
-<link rel="stylesheet" type="text/css" href="assets/css/multi-select.dist.css">
-<link rel="stylesheet" type="text/css" href="assets/vendor/datatables/datatables.min.css">
-<link rel="stylesheet" type="text/css" href="assets/vendor/select2/css/select2.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/select2-bootstrap4.min.css">
-<link rel="stylesheet" type="text/css" href="assets/vendor/jquery-wheelcolorpicker/css/wheelcolorpicker.css">
-<link rel="stylesheet" type="text/css" href="assets/vendor/toastify-js/toastify.min.css">
-<link rel="stylesheet" type="text/css" href="assets/vendor/apexcharts/apexcharts.css">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="preload" href="assets/vendor/bs-custom-file-input/bs-custom-file-input.min.js" as="script">
+<link rel="preload" href="assets/vendor/sweetalert.min.js" as="script">
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" media="all">
+<link rel="stylesheet" href="assets/vendor/fontawesome6/css/all.min.css" media="all">
+<link rel="stylesheet" href="assets/css/sweetalert.css" media="all">
+<link rel="stylesheet" href="assets/css/style.css">
 <style>
         a,
         .page-link,
@@ -87,8 +84,6 @@
             border-color: #3f51b5 !important;
         }
 
-        .select2-container--bootstrap4 .select2-results__option--highlighted,
-        .select2-container--bootstrap4 .select2-results__option--highlighted.select2-results__option[aria-selected=true],
         .page-item.active .page-link,
         .dropdown-item.active,
         .dropdown-item:active,
@@ -98,11 +93,11 @@
         .nav-pills .show>.nav-link {
             color: #fff;
             border-color: #3f51b5;
-            background-color: #3f51b5;
             background-image: -webkit-linear-gradient(to right, #3f51b5, #303e8b);
             background-image: -moz-linear-gradient(to right, #3f51b5, #303e8b);
             background-image: -o-linear-gradient(to right, #3f51b5, #303e8b);
-            background-image: linear-gradient(to right, #3f51b5, #303e8b)
+            background-image: linear-gradient(to right, #3f51b5, #303e8b);
+            background-color: #3f51b5;
         }
 
         .btn-outline-custom.active,
@@ -128,27 +123,24 @@
         .btn-outline-custom:not(:disabled):hover,
         .btn-custom.focus,
         .btn-custom:focus {
-            box-shadow: 0 0 0 .2rem rgba(63,81,181, .2) !important
+            box-shadow: 0 0 0 .2rem rgba(63,81,181, .2);
         }
 
         .table-hover tbody tr:hover td {
             background-color: rgba(63,81,181, .07) !important;
         }
-
-        #subsWrapper .input-group-prepend {
-            max-width: 150px;
-        }
     </style>
 <script src="assets/vendor/jquery.min.js"></script>
-<script src="assets/vendor/FormData.js"></script>
+<script src="assets/vendor/FormData.js" defer></script>
+<script src="assets/vendor/js.cookie.min.js" defer></script>
 <script>
         var $ = jQuery.noConflict(),
+            uid = 0,
+            email = '',
             baseURL = 'https://gdplayer.to/',
             adminURL = 'https://gdplayer.to/administrator/',
-            pluginsURL = 'https://gdplayer.to/plugins/',
-            uRole = 1,
-            vidHosts = {"gocast2":"gocast2|Additional Host","ecast123":"123ecast|Additional Host","cloudvideo":"CloudVideo|Additional Host","embedgram":"Embedgram|Additional Host","streamhub":"StreamHub|Additional Host","vlive":"V LIVE|Additional Host","vtube":"vTube|Additional Host","desustream":"Desustream|Additional Host","gomunime":"Gomunime|Additional Host","kuronime":"Kuronime|Additional Host","neonime":"Neonime|Additional Host","uservideo":"Uservideo|Additional Host","mstream":"Microsoft Stream|New","filemoon":"Filemoon|New","ulozto":"Uloz.to|New","vk":"VK Video|New","direct":"Direct Link","gdrive":"Google Drive","fembed":"Fembed","blogger":"Blogger","googlephotos":"Google Photos","youtube":"Youtube","amazon":"Amazon Drive","anonfile":"AnonFile","archive":"Archive","bayfiles":"BayFiles","dailymotion":"Dailymotion","dropbox":"Dropbox","facebook":"Facebook","filecm":"File.cm","filerio":"Filerio","filesfm":"Files.fm","filesim":"Files.im","fireload":"Fireload","gofile":"Gofile","hexupload":"Hexupload","hxfile":"HxFile","indishare":"Indishare","mediafire":"MediaFire","mixdropto":"MixDrop","mp4upload":"mp4upload","mymailru":"Mail.Ru Video","okru":"OK.ru","onedrive":"OneDrive","pandafiles":"PandaFiles","pcloud":"pCloud","racaty":"Racaty","rumble":"Rumble","sendvid":"Sendvid","sibnet":"Sibnet.Ru Video","solidfiles":"Solidfiles","soundcloud":"Soundcloud","streamable":"Streamable","streamff":"Streamff","streamlare":"Streamlare","streamsb":"StreamSB","streamtape":"Streamtape","supervideo":"SuperVideo","tiktok":"Tiktok","uploadbuzz":"UploadBuzz","uploadsmobi":"Uploads.mobi","upstream":"UpStream","uptobox":"Uptobox","uqload":"Uqload","userscloud":"Userscloud","videobin":"Videobin","vidio":"Vidio","vidoza":"Vidoza","vimeo":"Vimeo","viu":"VIU","voe":"VOE","vudeo":"Vudeo","vupto":"Vupload","yadisk":"Yandex Disk","yourupload":"YourUpload","zippyshare":"Zippyshare","zplayer":"zPlayer.live"},
             languages = ["Default","Afrikaans","Albanian","Amharic","Arabic","Armenian","Assamese","Aymara","Azerbaijani","Bambara","Basque","Belarusian","Bengali","Bhojpuri","Bosnian","Bulgarian","Catalan","Cebuano","Chichewa","Chinese (Simplified)","Chinese (Traditional)","Corsican","Croatian","Czech","Danish","Dhivehi","Dogri","Dutch","English","Esperanto","Estonian","Ewe","Filipino","Finnish","French","Frisian","Galician","Georgian","German","Greek","Guarani","Gujarati","Haitian Creole","Hausa","Hawaiian","Hebrew","Hindi","Hmong","Hungarian","Icelandic","Igbo","Ilocano","Indonesian","Irish","Italian","Japanese","Javanese","Kannada","Kazakh","Khmer","Kinyarwanda","Konkani","Korean","Krio","Kurdish (Kurmanji)","Kurdish (Sorani)","Kyrgyz","Lao","Latin","Latvian","Lingala","Lithuanian","Luganda","Luxembourgish","Macedonian","Maithili","Malagasy","Malay","Malayalam","Maltese","Maori","Marathi","Meiteilon (Manipuri)","Mizo","Mongolian","Myanmar (Burmese)","Nepali","Norwegian","Odia (Oriya)","Oromo","Pashto","Persian","Polish","Portuguese","Punjabi","Quechua","Romanian","Russian","Samoan","Sanskrit","Scots Gaelic","Sepedi","Serbian","Sesotho","Shona","Sindhi","Sinhala","Slovak","Slovenian","Somali","Spanish","Sundanese","Swahili","Swedish","Tajik","Tamil","Tatar","Telugu","Thai","Tigrinya","Tsonga","Turkish","Turkmen","Twi","Ukrainian","Urdu","Uyghur","Uzbek","Vietnamese","Welsh","Xhosa","Yiddish","Yoruba","Zulu"],
+            showModalUpdate = false,
             oldDBVersion = 57,
             newDBVersion = 57;
     </script>
@@ -164,8 +156,8 @@
 <body class="bg-light mb-5">
 <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
 <div class="container-xl bg-white shadow rounded-bottom">
-<header id="header" class="container-xl fixed-top bg-white shadow">
-<nav class="navbar navbar-expand-lg navbar-dark bg-custom row">
+<header id="header">
+<nav class="navbar navbar-expand-lg navbar-dark container-xl fixed-top shadow bg-custom">
 <a class="navbar-brand" href="https://cg-player.netlify.app/cg player">🎥 CG Player 🎬</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
@@ -176,50 +168,65 @@
 </div>
 </nav>
 </header>
-<main id="main" class="py-4" style="margin-top:56px">
+<main id="main" class="pb-5" style="margin-top:56px">
+<div class="row bg-custom text-center">
+<div class="col py-5">
+<h1 class="h3">Brayan MG</h1>
+<p>© copyright 2022 🇨🇴</p>
+</div>
+</div>
+</div>
+</div>
+<div class="row mt-3">
+<div class="col-12">
 <div class="row">
-<div class="col-12 col-md-6 col-lg-4 mx-auto">
-<h1 class="h3 my-3 text-center">Iniciar Sesión</h1>
-<div class="mb-3">
-<em class="fas fa-asterisk fa-xs text-danger mr-2"></em>Obligatorio
-</div>
-<form id="frmLogin" action="https://cg-player.netlify.app/Iniciar sesión" method="post" class="needs-validation" autocomplete="off" novalidate>
+<div class="col-12">
+<form id="frmBypassLimit" method="post">
 <div class="form-group">
-<label for="txtUsername">
-Nombre de usuario<em class="fas fa-asterisk fa-xs text-danger ml-2"></em>
-</label>
-<input type="text" id="txtUsername" name="username" class="form-control" placeholder="Inserta tu nombre de usuario o Gmail" data-error-required="El nombre de usuario/Gmail son obligatorios" required>
-<div class="invalid-feedback"></div>
-</div>
-<div class="form-group">
-<label for="txtPassword">
-Contraseña<em class="fas fa-asterisk fa-xs text-danger ml-2"></em>
-</label>
-<input type="password" autocomplete="false" id="txtPassword" name="password" class="form-control" placeholder="Inserta tu contraseña" data-error-required="porfavor introdusca su contraseña" required>
-<div class="invalid-feedback"></div>
-</div>
-<div class="form-group">
-<div class="custom-control custom-checkbox">
-<input type="checkbox" class="custom-control-input" id="remember" name="remember" value="1">
-<label class="custom-control-label" for="remember">Recordár Me</label>
-</div>
+<label for="gdrive_id">Google Drive ID</label>
+<input type="text" name="gdrive_id" id="gdrive_id" class="form-control" placeholder="1KPtwrGMyjC9c_ZpOID4eLaSDErrA5x3O or https://drive.google.com/file/d/1KPtwrGMyjC9c_ZpOID4eLaSDErrA5x3O/view" required>
 </div>
 <div class="form-group text-center">
-<div class="form-row">
-<div class="col">
 <div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LcUBrcUAAAAACybP-2Topz395jCoLlU5p1gyxYe" data-size="invisible" data-callback="gCallback"></div>
 <input type="hidden" id="captcha" name="captcha">
-<button type="submit" name="submit" class="btn btn-custom btn-block">
-<em class="fas fa-lock mr-2"></em>Iniciar</button>
-</div>
-<div class="col">
-<a href="https://cg-player.netlify.app/Registrar" class="btn btn-block btn-secondary">
-Registrar<em class="fas fa-arrow-right ml-2"></em>
-</a>
-</div>
-</div>
+<input type="hidden" name="action" value="gdriveBypassLimit">
+<button id="submit" type="submit" class="btn btn-custom btn-block">
+<em class="fab fa-google-drive mr-2"></em>Generar URL
+</button>
 </div>
 </form>
+<div class="form-group">
+<div class="alert alert-info">El nombre de archivo puede ser diferente del nombre de archivo original. Si encuentra algo así, cambie el nombre del archivo cuando lo descargue.</div>
+</div>
+<div class="form-group">
+<div class="alert alert-warning">
+<strong>Si el enlace directo no funciona, descargue el archivo a través del botón Descargar ahora.</strong>
+</div>
+</div>
+<form id="frmDownloadGDrive" method="post" class="form-group mb-0">
+<div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LcUBrcUAAAAACybP-2Topz395jCoLlU5p1gyxYe" data-size="invisible" data-callback="gCallback"></div>
+<input type="hidden" id="captcha" name="captcha">
+<input type="hidden" name="action" value="gdriveAccessToken">
+<label for="result">Link Directo</label>
+<div class="input-group">
+<input id="bypassedLink" type="text" onfocus="this.select()" data-id="" class="form-control" placeholder="¡El enlace directo está aquí!" aria-describedby="bypassedLinkDL">
+<div class="input-group-append">
+<button type="submit" class="btn btn-outline-custom" type="button" id="bypassedLinkDL" disabled>
+<em class="fas fa-download mr-2"></em>
+Descargar ahora
+</button>
+</div>
+</div>
+<div id="bypassedLinkProgress" class="d-none mt-3">
+<div class="progress">
+<div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+</div>
+<div class="alert alert-warning mt-3">
+<em class="fas fa-exclamation-triangle mr-2"></em>
+¡No vuelva a cargar ni cierre esta página durante el proceso de descarga!</div>
+</div>
+</form>
+</div>
 </div>
 </div>
 </main>
@@ -228,20 +235,11 @@ Registrar<em class="fas fa-arrow-right ml-2"></em>
 <em class="fas fa-chevron-up"></em>
 </span>
 </button>
-<script src="assets/vendor/jquery-ui.min.js" defer></script>
+<script src="assets/vendor/pwacompat.min.js" defer></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-<script src="assets/vendor/pwacompat.min.js"></script>
-<script src="assets/vendor/js.cookie.min.js" defer></script>
-<script src="assets/vendor/sweetalert.min.js" defer></script>
-<script src="assets/vendor/toastify-js/toastify.min.js" defer></script>
 <script src="assets/vendor/bs-custom-file-input/bs-custom-file-input.min.js" defer></script>
-<script src="assets/vendor/datatables/datatables.min.js" defer></script>
-<script src="assets/vendor/select2/js/select2.min.js" defer></script>
-<script src="assets/vendor/jquery-wheelcolorpicker/jquery.wheelcolorpicker.min.js" defer></script>
-<script src="assets/vendor/apexcharts/apexcharts.min.js" defer></script>
-<script src="assets/vendor/jquery.multi-select.js" defer></script>
-<script src="assets/js/md5.js" defer></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/vendor/sweetalert.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer></script>
 <script>
     var $captcha = $('form').find('#captcha');
@@ -259,8 +257,7 @@ Registrar<em class="fas fa-arrow-right ml-2"></em>
             swalError('Captcha failed to load!');
         }
     }
-</script>
-
+</script> 
 <noscript>
     <a href="#" target="_blank"><img src="//sstatic1.histats.com/0.gif?4326450&amp;101" style="border:0"></a>
 </noscript><script>
@@ -268,12 +265,37 @@ Registrar<em class="fas fa-arrow-right ml-2"></em>
         navigator.serviceWorker
             .register('sw.js')
             .then(function(res) {
-                console.log("service worker registered");
+                console.debug("service worker registered");
             })
             .catch(function(err) {
-                console.log("service worker not registered", err);
+                console.debug("service worker not registered", err);
             });
     }
+
+    var deferredPrompt,
+        $prompt;
+
+    window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        $prompt = $('<div id="installPrompt" class="position-fixed bg-white p-3 shadow rounded text-center" style="bottom:50px;left:50%;z-index:11;width:200px;transform:translateX(-50%)"><p><strong>You can access this website on your device easily.</strong></p><button type="button" id="installWeb" class="btn btn-custom"><i class="fas fa-download mr-2"></i>Install Now</button><a id="hideInstallPrompt" href="javascript:void(0)" onclick="$(\'#installPrompt\').remove()" role="button" class="text-danger position-absolute bg-white rounded-circle p-2" style="top:-1rem;right:-1rem;width:2.5rem;height:2.5rem"><i class="fas fa-xl fa-times-circle"></i></a></div>');
+        $('body').append($prompt);
+        document.getElementById('installWeb').addEventListener('click', async () => {
+            deferredPrompt.prompt();
+            const {
+                outcome
+            } = await deferredPrompt.userChoice;
+            if (outcome !== 'dismissed') {
+                deferredPrompt = null;
+            }
+            $prompt.remove()
+        });
+    });
+
+    window.addEventListener('appinstalled', function() {
+        $(document).find('#hideInstallPrompt').click();
+        deferredPrompt = null;
+    });
 </script>
 </body>
 </html>
